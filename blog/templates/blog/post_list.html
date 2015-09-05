@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>
-<div>
-    <h1><a href="/">3Rabie Blog</a></h1>
-</div>
-<div>
+    <head>
+        <title>3Rabie Blog</title>
+    </head>
 
-{% for post in posts %}
-    <div>
-        <p>published: {{ post.published_date }}</p>
-        <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaks }}</p>
-    </div>
-{% endfor %}
-</div>
+    <body>
 
+       <div>
+
+             <h1><a href="/">3Rabie Blog</a></h1>
+
+       </div>
+
+       {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaks }}</p>
+            </div>
+        {% endfor %}
+    </body>
 </html>
